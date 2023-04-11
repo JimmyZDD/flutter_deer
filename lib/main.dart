@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'package:utils/theme/theme_utils.dart';
 import 'package:utils/utils.dart';
 import 'package:utils/net/intercept.dart';
 import 'package:utils/net/net.dart';

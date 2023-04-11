@@ -85,6 +85,7 @@ flutter:
   assets:
     - assets/data/
     - assets/images/
+    - assets/images/home/
     - assets/images/login/
     - assets/images/state/
 
