@@ -85,8 +85,10 @@ flutter:
   assets:
     - assets/data/
     - assets/images/
-    - assets/images/home/
     - assets/images/login/
+    - assets/images/home/
+    - assets/images/order/
+    - assets/images/order/dark/
     - assets/images/state/
 
   # An image asset can refer to one or more resolution-specific "variants", see

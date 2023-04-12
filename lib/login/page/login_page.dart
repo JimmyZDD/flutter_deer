@@ -72,7 +72,8 @@ class _LoginPageState extends State<LoginPage>
 
   void _login() {
     SpUtil.putString(Constant.phone, _nameController.text);
-    Get.toNamed(Routes.HOME);
+    // Get.toNamed(Routes.HOME);
+    Get.offAndToNamed(Routes.HOME);
     // NavigatorUtils.push(context, StoreRouter.auditPage);
   }
 

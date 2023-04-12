@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:utils/res/colors.dart';
-import 'package:utils/res/dimens.dart';
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
@@ -74,18 +72,6 @@ class _HomePageState extends State<HomePage> with RestorationMixin {
             color: Colours.app_main,
           ),
         ],
-        // [
-        //   LoadAssetImage(
-        //     'home/icon_statistics',
-        //     width: _imageSize,
-        //     color: Colours.unselected_item_color,
-        //   ),
-        //   LoadAssetImage(
-        //     'home/icon_statistics',
-        //     width: _imageSize,
-        //     color: Colours.app_main,
-        //   ),
-        // ],
         [
           LoadAssetImage(
             'home/icon_shop',
@@ -130,14 +116,6 @@ class _HomePageState extends State<HomePage> with RestorationMixin {
             color: Colours.dark_app_main,
           ),
         ],
-        // [
-        //   LoadAssetImage('home/icon_statistics', width: _imageSize),
-        //   LoadAssetImage(
-        //     'home/icon_statistics',
-        //     width: _imageSize,
-        //     color: Colours.dark_app_main,
-        //   ),
-        // ],
         [
           LoadAssetImage('home/icon_shop', width: _imageSize),
           LoadAssetImage(
