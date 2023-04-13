@@ -90,6 +90,7 @@ flutter:
     - assets/images/order/
     - assets/images/order/dark/
     - assets/images/state/
+    - assets/images/shop/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
