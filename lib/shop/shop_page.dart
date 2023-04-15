@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-11 21:48:07
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-13 22:51:46
+ * @LastEditTime: 2023-04-15 22:48:05
  * @FilePath: /flutter_deer/lib/shop/shop_page.dart
  * @Description: 
  */
@@ -11,6 +11,8 @@ import 'package:flutter_deer/shop/controllers/shop_controller.dart';
 import 'package:get/get.dart';
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
+
+import '../routes/app_pages.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({
@@ -170,7 +172,7 @@ class _ShopPageState extends State<ShopPage>
               image: const ['dpsz'],
               darkImage: const ['dark_dpsz'],
               onItemClick: (index) {
-                // NavigatorUtils.push(context, ShopRouter.shopSettingPage);
+                Get.toNamed(Routes.SHOP_SETTING);
               },
             ),
           ),

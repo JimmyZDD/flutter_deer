@@ -2,12 +2,13 @@
  * @Author: zdd
  * @Date: 2023-04-09 15:07:03
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-12 22:38:54
+ * @LastEditTime: 2023-04-15 23:02:20
  * @FilePath: /flutter_deer/packages/widgets/lib/widgets.dart
  * @Description: 
  */
 library widgets;
 
+export 'src/base_dialog.dart';
 export 'src/my_app_bar.dart';
 export 'src/my_card.dart';
 export 'src/my_button.dart';

@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-11 21:39:14
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-11 21:50:36
+ * @LastEditTime: 2023-04-15 22:56:25
  * @FilePath: /flutter_deer/lib/routes/app_pages.dart
  * @Description: 
  */
@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 import '../goods/bindings/goods_binding.dart';
 import '../goods/goods_page.dart';
 import '../shop/bindings/shop_binding.dart';
+import '../shop/input_text_page.dart';
 import '../shop/shop_page.dart';
 import '../home/bindings/home_binding.dart';
 import '../home/home_page.dart';
@@ -20,6 +21,7 @@ import '../login/page/register_page.dart';
 import '../order/bindings/order_binding.dart';
 import '../order/order_page.dart';
 import '../pages/not_found_page.dart';
+import '../shop/shop_setting_page.dart';
 
 /*
  * @Author: zdd
@@ -67,6 +69,16 @@ class AppPages {
       page: () => const ShopPage(),
       binding: ShopBinding(),
     ),
+    GetPage(
+      name: _Paths.SHOP_SETTING,
+      page: () => const ShopSettingPage(),
+    ),
+    // GetPage(
+    //   name: _Paths.SHOP_INPUT_TEXT_PAGE,
+    //   page: (title) => InputTextPage(
+    //     title: title,
+    //   ),
+    // ),
   ];
 
   static final unknownRoute = GetPage(
