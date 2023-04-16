@@ -5,24 +5,23 @@ class ApiResponse {
     this.message,
   });
 
-  int? code; 
+  int? code;
 
-  String? type; 
+  String? type;
 
-  String? message; 
+  String? message;
 
   factory ApiResponse.fromJson(Map<String, dynamic> json) => ApiResponse(
-    code: json["code"],
-    type: json["type"],
-    message: json["message"],
-  );
+        code: json["code"],
+        type: json["type"],
+        message: json["message"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "code": code,
-    "type": type,
-    "message": message,
-  };
-
+        "code": code,
+        "type": type,
+        "message": message,
+      };
 }
 
 class Category {
@@ -31,20 +30,19 @@ class Category {
     this.name,
   });
 
-  int? id; 
+  int? id;
 
-  String? name; 
+  String? name;
 
   factory Category.fromJson(Map<String, dynamic> json) => Category(
-    id: json["id"],
-    name: json["name"],
-  );
+        id: json["id"],
+        name: json["name"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "name": name,
-  };
-
+        "id": id,
+        "name": name,
+      };
 }
 
 class Pet {
@@ -57,37 +55,36 @@ class Pet {
     this.status,
   });
 
-  int? id; 
+  int? id;
 
-  Category? category; 
+  Category? category;
 
-  String name; 
+  String name;
 
-  List<String> photoUrls; 
+  List<String> photoUrls;
 
-  List<Tag>? tags; 
+  List<Tag>? tags;
 
-  ///pet status in the store 
-  String? status; 
+  ///pet status in the store
+  String? status;
 
   factory Pet.fromJson(Map<String, dynamic> json) => Pet(
-    id: json["id"],
-    category: Category.fromJson(json["category"]),
-    name: json["name"],
-    photoUrls: List<String>.from(json["photoUrls"].map((x) => x)),
-    tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
-    status: json["status"],
-  );
+        id: json["id"],
+        category: Category.fromJson(json["category"]),
+        name: json["name"],
+        photoUrls: List<String>.from(json["photoUrls"].map((x) => x)),
+        tags: List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
+        status: json["status"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "category": category != null ? category!.toJson() : null,
-    "name": name,
-    "photoUrls": photoUrls.map((e) => e).toList(),
-    "tags": tags != null ? tags!.map((e) => e.toJson()).toList() : null,
-    "status": status,
-  };
-
+        "id": id,
+        "category": category != null ? category!.toJson() : null,
+        "name": name,
+        "photoUrls": photoUrls.map((e) => e).toList(),
+        "tags": tags != null ? tags!.map((e) => e.toJson()).toList() : null,
+        "status": status,
+      };
 }
 
 class Tag {
@@ -96,20 +93,19 @@ class Tag {
     this.name,
   });
 
-  int? id; 
+  int? id;
 
-  String? name; 
+  String? name;
 
   factory Tag.fromJson(Map<String, dynamic> json) => Tag(
-    id: json["id"],
-    name: json["name"],
-  );
+        id: json["id"],
+        name: json["name"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "name": name,
-  };
-
+        "id": id,
+        "name": name,
+      };
 }
 
 class Order {
@@ -122,37 +118,36 @@ class Order {
     this.complete,
   });
 
-  int? id; 
+  int? id;
 
-  int? petId; 
+  int? petId;
 
-  int? quantity; 
+  int? quantity;
 
-  DateTime? shipDate; 
+  DateTime? shipDate;
 
-  ///Order Status 
-  String? status; 
+  ///Order Status
+  String? status;
 
-  bool? complete; 
+  bool? complete;
 
   factory Order.fromJson(Map<String, dynamic> json) => Order(
-    id: json["id"],
-    petId: json["petId"],
-    quantity: json["quantity"],
-    shipDate: json["shipDate"],
-    status: json["status"],
-    complete: json["complete"],
-  );
+        id: json["id"],
+        petId: json["petId"],
+        quantity: json["quantity"],
+        shipDate: json["shipDate"],
+        status: json["status"],
+        complete: json["complete"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "petId": petId,
-    "quantity": quantity,
-    "shipDate": shipDate,
-    "status": status,
-    "complete": complete,
-  };
-
+        "id": id,
+        "petId": petId,
+        "quantity": quantity,
+        "shipDate": shipDate,
+        "status": status,
+        "complete": complete,
+      };
 }
 
 class User {
@@ -167,44 +162,42 @@ class User {
     this.userStatus,
   });
 
-  int? id; 
+  int? id;
 
-  String? username; 
+  String? username;
 
-  String? firstName; 
+  String? firstName;
 
-  String? lastName; 
+  String? lastName;
 
-  String? email; 
+  String? email;
 
-  String? password; 
+  String? password;
 
-  String? phone; 
+  String? phone;
 
-  ///User Status 
-  int? userStatus; 
+  ///User Status
+  int? userStatus;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
-    id: json["id"],
-    username: json["username"],
-    firstName: json["firstName"],
-    lastName: json["lastName"],
-    email: json["email"],
-    password: json["password"],
-    phone: json["phone"],
-    userStatus: json["userStatus"],
-  );
+        id: json["id"],
+        username: json["username"],
+        firstName: json["firstName"],
+        lastName: json["lastName"],
+        email: json["email"],
+        password: json["password"],
+        phone: json["phone"],
+        userStatus: json["userStatus"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "username": username,
-    "firstName": firstName,
-    "lastName": lastName,
-    "email": email,
-    "password": password,
-    "phone": phone,
-    "userStatus": userStatus,
-  };
-
+        "id": id,
+        "username": username,
+        "firstName": firstName,
+        "lastName": lastName,
+        "email": email,
+        "password": password,
+        "phone": phone,
+        "userStatus": userStatus,
+      };
 }
-
