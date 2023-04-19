@@ -2,11 +2,10 @@
  * @Author: zdd
  * @Date: 2023-04-13 22:27:10
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-13 22:50:02
+ * @LastEditTime: 2023-04-19 22:38:15
  * @FilePath: /flutter_deer/lib/shop/providers/shop_provider.dart
  * @Description: 
  */
-import 'dart:convert';
 
 import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:get/get.dart';

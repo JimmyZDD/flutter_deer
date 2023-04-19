@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-09 15:45:18
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-09 16:05:02
+ * @LastEditTime: 2023-04-19 22:35:25
  * @FilePath: /flutter_deer/packages/widgets/lib/src/selected_image.dart
  * @Description: 
  */
@@ -12,9 +12,6 @@ import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:utils/res/resources.dart';
-import 'package:utils/util/device_utils.dart';
-import 'package:utils/util/image_utils.dart';
 import 'package:utils/utils.dart';
 import 'package:image_picker/image_picker.dart';
 

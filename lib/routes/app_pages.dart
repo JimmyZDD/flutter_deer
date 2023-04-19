@@ -2,16 +2,20 @@
  * @Author: zdd
  * @Date: 2023-04-11 21:39:14
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-15 22:56:25
+ * @LastEditTime: 2023-04-19 22:43:12
  * @FilePath: /flutter_deer/lib/routes/app_pages.dart
  * @Description: 
  */
+import 'package:flutter_deer/setting/about_page.dart';
+import 'package:flutter_deer/setting/account_manager_page.dart';
+import 'package:flutter_deer/setting/locale_page.dart';
+import 'package:flutter_deer/setting/theme_page.dart';
 import 'package:get/get.dart';
 
 import '../goods/bindings/goods_binding.dart';
 import '../goods/goods_page.dart';
+import '../setting/setting_page.dart';
 import '../shop/bindings/shop_binding.dart';
-import '../shop/input_text_page.dart';
 import '../shop/shop_page.dart';
 import '../home/bindings/home_binding.dart';
 import '../home/home_page.dart';
@@ -73,12 +77,26 @@ class AppPages {
       name: _Paths.SHOP_SETTING,
       page: () => const ShopSettingPage(),
     ),
-    // GetPage(
-    //   name: _Paths.SHOP_INPUT_TEXT_PAGE,
-    //   page: (title) => InputTextPage(
-    //     title: title,
-    //   ),
-    // ),
+    GetPage(
+      name: _Paths.SETTING_PAGE,
+      page: () => const SettingPage(),
+    ),
+    GetPage(
+      name: _Paths.ACCOUNT_MANAGER,
+      page: () => const AccountManagerPage(),
+    ),
+    GetPage(
+      name: _Paths.THEME_PAGE,
+      page: () => const ThemePage(),
+    ),
+    GetPage(
+      name: _Paths.LOCALE_PAGE,
+      page: () => const LocalePage(),
+    ),
+    GetPage(
+      name: _Paths.ABOUT_PAGE,
+      page: () => const AboutPage(),
+    ),
   ];
 
   static final unknownRoute = GetPage(

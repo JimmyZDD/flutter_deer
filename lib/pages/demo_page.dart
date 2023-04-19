@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-09 16:20:00
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-09 17:58:00
+ * @LastEditTime: 2023-04-19 22:37:35
  * @FilePath: /flutter_deer/lib/pages/demo_page.dart
  * @Description: 
  */
@@ -15,7 +15,7 @@ class DemoPage extends StatefulWidget {
   const DemoPage({super.key});
 
   @override
-  _DemoPageState createState() => _DemoPageState();
+  State<DemoPage> createState() => _DemoPageState();
 }
 
 class _DemoPageState extends State<DemoPage> {
@@ -36,7 +36,7 @@ class _DemoPageState extends State<DemoPage> {
         centerTitle: 'Demo',
       ),
       body: Column(
-        children: <Widget>[
+        children: const [
           Gaps.vGap5,
           ClickItem(
             title: 'Overlay',

@@ -57,6 +57,7 @@ dependencies:
   url_strategy: 0.2.0
   # 桌面应用调整窗口的大小和位置 https://github.com/leanflutter/window_manager
   window_manager: 0.3.0
+  flustars_flutter3: ^3.0.0
 
 dev_dependencies:
   flutter_test:

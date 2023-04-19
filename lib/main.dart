@@ -6,12 +6,6 @@ import 'package:get/get.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:utils/utils.dart';
-import 'package:utils/net/intercept.dart';
-import 'package:utils/net/net.dart';
-import 'package:utils/res/constant.dart';
-import 'package:utils/util/device_utils.dart';
-import 'package:utils/util/handle_error_utils.dart';
-import 'package:utils/util/log_utils.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'bindings/app.dart';

@@ -161,6 +161,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "6.1.4"
+  flustars_flutter3:
+    dependency: "direct main"
+    description:
+      name: flustars_flutter3
+      sha256: d4f412eeb97e648dfe5cf888aa9066f6c1b1f133ff72dca264c0d23a906e3dab
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.0"
   flutter:
     dependency: "direct main"
     description: flutter

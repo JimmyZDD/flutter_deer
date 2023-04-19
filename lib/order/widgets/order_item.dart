@@ -1,5 +1,5 @@
+import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter/material.dart';
-import 'package:common_utils/common_utils.dart';
 import 'package:utils/res/colors.dart';
 import 'package:utils/res/dimens.dart';
 import 'package:utils/res/gaps.dart';

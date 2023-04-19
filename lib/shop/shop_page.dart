@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-11 21:48:07
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-15 22:48:05
+ * @LastEditTime: 2023-04-19 22:39:17
  * @FilePath: /flutter_deer/lib/shop/shop_page.dart
  * @Description: 
  */
@@ -70,7 +70,7 @@ class _ShopPageState extends State<ShopPage>
           IconButton(
             tooltip: '设置',
             onPressed: () {
-              // NavigatorUtils.push(context, SettingRouter.settingPage);
+              Get.toNamed(Routes.SETTING_PAGE);
             },
             icon: LoadAssetImage(
               'shop/setting',

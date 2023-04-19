@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deer/shop/input_text_page.dart';
 import 'package:flutter_deer/shop/widgets/pay_type_dialog.dart';
 import 'package:get/get.dart';
-import 'package:utils/util/other_utils.dart';
 import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
