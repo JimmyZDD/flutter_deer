@@ -5,6 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Dart: gen_cli ",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "./packages/gen_cli/",
+      "program": "bin/gen_cli.dart",
+      "args": [
+				"generate",
+				"model",
+				// "dir",
+        // "output"
+			],
+    },
+    {
       "name": "flutter_deer",
       "request": "launch",
       "type": "dart"

@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-17 12:06:59
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-17 22:17:41
+ * @LastEditTime: 2023-04-20 11:32:04
  * @FilePath: /flutter_deer/packages/gen_cli/lib/common/utils/pubspec/pubspec_utils.dart
  * @Description: 
  */
@@ -13,11 +13,6 @@ import 'package:pubspec/pubspec.dart';
 import 'package:version/version.dart' as v;
 
 import '../../../exception_handler/exceptions/cli_exception.dart';
-import '../../menu/menu.dart';
-import '../log_utils.dart';
-import '../pub_dev_api.dart';
-import '../shell/shel.utils.dart';
-import 'yaml_to.string.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class PubspecUtils {
@@ -62,63 +57,6 @@ class PubspecUtils {
 
   static bool? get extraFolder => _extraFolder.value;
 
-  static Future<bool> addDependencies(String package,
-      {String? version, bool isDev = false, bool runPubGet = true}) async {
-    var pubSpec = PubSpec.fromYamlString(_pubspecFile.readAsStringSync());
-
-    if (containsPackage(package)) {
-      LogService.info(
-          'package: %s 已经安装, 你想更新它吗？'.trArgs([package]), false, false);
-      final menu = Menu(
-        [
-          '是的!',
-          '不',
-        ],
-      );
-      final result = menu.choose();
-      if (result.index != 0) {
-        return false;
-      }
-    }
-
-    version = version == null || version.isEmpty
-        ? await PubDevApi.getLatestVersionFromPackage(package)
-        : '^$version';
-    if (version == null) return false;
-    if (isDev) {
-      pubSpec.devDependencies[package] = HostedReference.fromJson(version);
-    } else {
-      pubSpec.dependencies[package] = HostedReference.fromJson(version);
-    }
-
-    _savePub(pubSpec);
-    if (runPubGet) await ShellUtils.pubGet();
-    LogService.success('Package: %s 已安装！'.trArgs([package]));
-    return true;
-  }
-
-  static void removeDependencies(String package, {bool logger = true}) {
-    if (logger) LogService.info('Removing package: "$package"');
-
-    if (containsPackage(package)) {
-      var dependencies = pubSpec.dependencies;
-      var devDependencies = pubSpec.devDependencies;
-
-      dependencies.removeWhere((key, value) => key == package);
-      devDependencies.removeWhere((key, value) => key == package);
-      var newPub = pubSpec.copy(
-        devDependencies: devDependencies,
-        dependencies: dependencies,
-      );
-      _savePub(newPub);
-      if (logger) {
-        LogService.success('Package: %s 已移除！'.trArgs([package]));
-      }
-    } else if (logger) {
-      LogService.info('Package: %s 在本应用中未安装'.trArgs([package]));
-    }
-  }
-
   static bool containsPackage(String package, [bool isDev = false]) {
     var dependencies = isDev ? pubSpec.devDependencies : pubSpec.dependencies;
     return dependencies.containsKey(package.trim());
@@ -153,11 +91,6 @@ class PubspecUtils {
     } else {
       throw CliException('Package: %s 在本应用中未安装'.trArgs([package]));
     }
-  }
-
-  static void _savePub(PubSpec pub) {
-    var value = CliYamlToString().toYamlString(pub.toJson());
-    _pubspecFile.writeAsStringSync(value);
   }
 }
 

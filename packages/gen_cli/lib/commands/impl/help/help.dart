@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-17 13:00:04
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-17 13:05:02
+ * @LastEditTime: 2023-04-20 22:19:16
  * @FilePath: /flutter_deer/packages/gen_cli/lib/commands/impl/help/help.dart
  * @Description: 
  */
@@ -13,6 +13,9 @@ import '../../interface/command.dart';
 class HelpCommand extends Command {
   @override
   String get commandName => 'help';
+
+  @override
+  List<String> get alias => ['-h'];
 
   @override
   String? get hint => '显示本帮助';

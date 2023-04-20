@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-17 12:59:40
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-17 22:10:00
+ * @LastEditTime: 2023-04-20 10:07:37
  * @FilePath: /flutter_deer/packages/gen_cli/lib/core/generator.dart
  * @Description: 
  */
@@ -62,7 +62,7 @@ class ErrorCommand extends Command {
   @override
   Future<void> execute() async {
     LogService.error(error);
-    LogService.info('run `get help` to help', false, false);
+    LogService.info('run `gen_cli help` to help', false, false);
   }
 
   @override

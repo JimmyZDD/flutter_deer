@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-17 12:59:05
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-17 22:18:26
+ * @LastEditTime: 2023-04-20 14:10:02
  * @FilePath: /flutter_deer/packages/gen_cli/lib/common/utils/shell/shel.utils.dart
  * @Description: 
  */
@@ -16,31 +16,6 @@ import '../pub_dev_api.dart';
 import '../pubspec/pubspec_lock.dart';
 
 class ShellUtils {
-  static Future<void> pubGet() async {
-    LogService.info('Running `flutter pub get` …');
-    await run('flutter pub get', verbose: true);
-  }
-
-  static Future<void> activatedNullSafe() async {
-    await pubGet();
-    await run('dart migrate --apply-changes --skip-import-check',
-        verbose: true);
-  }
-
-  static Future<void> flutterCreate(
-    String path,
-    String? org,
-    String iosLang,
-    String androidLang,
-  ) async {
-    LogService.info('Running `flutter create $path` …');
-
-    await run(
-        'flutter create --no-pub -i $iosLang -a $androidLang --org $org'
-        ' "$path"',
-        verbose: true);
-  }
-
   static Future<void> update(
       [bool isGit = false, bool forceUpdate = false]) async {
     isGit = GenCli.arguments.contains('--git');

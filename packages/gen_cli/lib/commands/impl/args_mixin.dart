@@ -62,6 +62,30 @@ mixin ArgsMixin {
     return _getArg('from');
   }
 
+  /// return parameter `dir`
+  ///
+  /// example run
+  /// `get g model from 'YOUR_MODEL_URL'`
+  ///
+  /// ```
+  /// print(fromArgument); // 'YOUR_MODEL_URL'
+  /// ```
+  String get dirArgument {
+    return _getArg('dir');
+  }
+
+  /// return parameter `jsonPath`
+  ///
+  /// example run
+  /// `get g model from 'YOUR_MODEL_URL'`
+  ///
+  /// ```
+  /// print(jsonPathArgument); // 'YOUR_MODEL_URL'
+  /// ```
+  String get jsonPathArgument {
+    return _getArg('jsonPath');
+  }
+
   /// return parameter `name`
   ///
   /// example run

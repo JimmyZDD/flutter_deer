@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-17 12:02:02
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-17 12:03:55
+ * @LastEditTime: 2023-04-20 10:33:17
  * @FilePath: /flutter_deer/packages/gen_cli/lib/common/utils/pub_dev_api.dart
  * @Description: 
  */
@@ -16,7 +16,7 @@ import 'log_utils.dart';
 class PubDevApi {
   static Future<String?> getLatestVersionFromPackage(String package) async {
     final languageCode = Platform.localeName.split('_')[0];
-    final pubSite = languageCode == 'zh'
+    final pubSite = languageCode.startsWith('zh')
         ? 'https://pub.flutter-io.cn/api/packages/$package'
         : 'https://pub.dev/api/packages/$package';
     var uri = Uri.parse(pubSite);

@@ -1,0 +1,3 @@
+# outputDir: ./lib/output/
+outputDir: /output_hi # 默认在lib下output文件下
+jsonPath: https://petstore.swagger.io/v2/swagger.json

@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-17 13:00:04
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-17 13:05:55
+ * @LastEditTime: 2023-04-20 11:25:48
  * @FilePath: /flutter_deer/packages/gen_cli/lib/commands/commands_list.dart
  * @Description: 
  */
@@ -13,7 +13,7 @@ final List<Command> commands = [
   CommandParent(
     'generate',
     [
-      // GenerateLocalesCommand(),
+      SwaggerGenerateCommand(),
       // GenerateModelCommand(),
     ],
     ['-g'],
