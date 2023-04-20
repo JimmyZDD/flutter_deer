@@ -1,6 +1,6 @@
 name: gen_cli
 description: Command-line application to gen api and model.
-version: 1.0.1
+version: 1.1.0
 homepage: http://www.tencent.pet
 # repository: https://github.com/my_org/my_repo
 
@@ -20,6 +20,7 @@ dependencies:
   recase: ">=4.0.0 <5.0.0"
   version: ">=2.0.0 <4.0.0"
   yaml: ">=3.1.0 <4.0.0"
+  meta: ^1.9.1
 
 
 dev_dependencies:
