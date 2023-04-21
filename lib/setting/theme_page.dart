@@ -2,13 +2,14 @@
  * @Author: zdd
  * @Date: 2023-04-19 22:20:51
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-19 22:28:01
+ * @LastEditTime: 2023-04-21 22:54:57
  * @FilePath: /flutter_deer/lib/setting/theme_page.dart
  * @Description: 
  */
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sp_util/sp_util.dart';
-import 'package:utils/res/constant.dart';
+import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
 class ThemePage extends StatefulWidget {
@@ -49,9 +50,9 @@ class _ThemePageState extends State<ThemePage> {
               final ThemeMode themeMode = index == 0
                   ? ThemeMode.system
                   : (index == 1 ? ThemeMode.dark : ThemeMode.light);
-//              Provider.of<ThemeProvider>(context, listen: false).setTheme(themeMode);
-              /// 与上方等价，provider 4.1.0添加的拓展方法
-              // context.read<ThemeProvider>().setTheme(themeMode);
+
+              ThemeController controller = Get.find();
+              controller.setTheme(themeMode);
               setState(() {});
             },
             child: Container(

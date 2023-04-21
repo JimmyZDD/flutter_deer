@@ -2,8 +2,8 @@
  * @Author: zdd
  * @Date: 2023-04-09 20:56:15
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-09 20:56:43
- * @FilePath: /flutter_deer/lib/home/bindings/app.dart
+ * @LastEditTime: 2023-04-21 23:27:35
+ * @FilePath: /flutter_deer/lib/bindings/app.dart
  * @Description: 
  */
 import 'package:get/get.dart';

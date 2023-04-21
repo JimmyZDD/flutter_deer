@@ -2,13 +2,15 @@
  * @Author: zdd
  * @Date: 2023-04-19 22:20:51
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-19 22:24:17
+ * @LastEditTime: 2023-04-21 23:32:50
  * @FilePath: /flutter_deer/lib/setting/locale_page.dart
  * @Description: 
  */
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:utils/res/constant.dart';
+import 'package:utils/utils.dart';
 import 'package:widgets/widgets.dart';
 
 class LocalePage extends StatefulWidget {
@@ -46,11 +48,10 @@ class _LocalePageState extends State<LocalePage> {
         itemBuilder: (_, int index) {
           return InkWell(
             onTap: () {
-              // final String locale =
-              //     index == 0 ? '' : (index == 1 ? 'zh' : 'en');
-              // context.read<LocaleProvider>().setLocale(locale);
-              // Toast.show('当前功能仅登录模块有效');
-              // setState(() {});
+              final String locale =
+                  index == 0 ? '' : (index == 1 ? 'zh' : 'en');
+
+              AppTranslations.setLocale(locale);
             },
             child: Container(
               alignment: Alignment.centerLeft,

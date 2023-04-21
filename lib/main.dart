@@ -118,7 +118,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// Toast 配置
     return GetMaterialApp(
       title: 'Flutter Deer',
       // showPerformanceOverlay: true, //显示性能标签
