@@ -83,6 +83,10 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goLogin() {
+    if (SpUtil.getString(Constant.accessToken, defValue: '')!.isNotEmpty) {
+      Get.offAndToNamed(Routes.HOME);
+      return;
+    }
     Get.offAndToNamed(Routes.loginPage);
   }
 

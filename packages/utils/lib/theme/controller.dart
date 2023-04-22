@@ -2,7 +2,7 @@
  * @Author: zdd
  * @Date: 2023-04-09 20:54:07
  * @LastEditors: zdd
- * @LastEditTime: 2023-04-21 23:37:31
+ * @LastEditTime: 2023-04-22 07:59:44
  * @FilePath: /flutter_deer/packages/utils/lib/theme/controller.dart
  * @Description: 
  */
@@ -55,6 +55,9 @@ class ThemeController extends GetxController {
 
   ThemeMode getThemeMode() {
     final String theme = SpUtil.getString(Constant.theme).nullSafe;
+    if (!themeMap.keys.contains(theme)) {
+      return ThemeMode.system;
+    }
     return themeMap[theme]!;
   }
 
